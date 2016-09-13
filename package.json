@@ -1,0 +1,29 @@
+{
+  "name": "node-boilerplate",
+  "version": "0.0.1",
+  "description": "A boilerplate node app",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node_modules/.bin/webpack --watch",
+    "devServer": "node server.dev.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brochington/node-boilerplate.git"
+  },
+  "author": "Broch Stilley",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brochington/node-boilerplate/issues"
+  },
+  "homepage": "https://github.com/brochington/node-boilerplate#readme",
+  "devDependencies": {
+    "babel-core": "^6.14.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015-node6": "^0.3.0",
+    "babel-preset-es2017": "^6.14.0",
+    "clean-webpack-plugin": "^0.1.10",
+    "webpack": "^1.13.2"
+  }
+}
