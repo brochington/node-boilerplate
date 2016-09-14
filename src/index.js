@@ -1,6 +1,6 @@
 
-console.log(`hello there, Brochington, man`);
-console.log('holy crap, did this wordfsk');
+console.log(`hello there, Brochinfdgggton, kjsdhf`);
+
 console.log(__dirname, __filename);
 
 const myStuff = () => {
