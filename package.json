@@ -4,7 +4,9 @@
   "description": "A boilerplate node app",
   "main": "index.js",
   "scripts": {
-    "dev": "node_modules/.bin/webpack --watch",
+    "dev": "gulp dev",
+    "build": "gulp build",
+    "clean": "gulp clean-dist",
     "devServer": "node server.dev.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,12 +20,17 @@
     "url": "https://github.com/brochington/node-boilerplate/issues"
   },
   "homepage": "https://github.com/brochington/node-boilerplate#readme",
-  "devDependencies": {
+  "devDependencies": {},
+  "dependencies": {
     "babel-core": "^6.14.0",
     "babel-loader": "^6.2.5",
     "babel-preset-es2015-node6": "^0.3.0",
     "babel-preset-es2017": "^6.14.0",
-    "clean-webpack-plugin": "^0.1.10",
-    "webpack": "^1.13.2"
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-file-cache": "0.0.1",
+    "gulp-nodemon": "^2.1.0",
+    "gulp-plumber": "^1.1.0"
   }
 }

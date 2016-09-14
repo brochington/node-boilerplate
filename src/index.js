@@ -1,13 +1,6 @@
-if (module.hot) {
-  // console.log("mod is hot!", module.hot);
-  module.hot.accept();
-  module.hot.dispose((fdfd) => {
-    console.log("get rid of this??");
-    console.log(module.hot);
-  })
-}
 
-console.log(`hello there, Brochington sdf`);
+console.log(`hello there, Brochington, man`);
+console.log('holy crap, did this wordfsk');
 console.log(__dirname, __filename);
 
 const myStuff = () => {
