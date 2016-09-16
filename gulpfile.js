@@ -1,13 +1,11 @@
 var gulp = require('gulp');
 var plumber = require('gulp-plumber');
 var babel = require('gulp-babel');
-var Cache = require('gulp-file-cache');
+var cache = require('gulp-cached');
 var nodemon = require('gulp-nodemon');
 var del = require('del');
 var mkdirp = require('mkdirp');
 var runSequence = require('run-sequence');
-
-var cache = new Cache();
 
 gulp.task('clean-dist', function() {
 	return del(['dist/**']);
@@ -20,11 +18,11 @@ gulp.task('make-dist', function(cb) {
 gulp.task('build', function() {
   return gulp.src('./src/**/*.js')
           .pipe(plumber())
-          .pipe(cache.filter())
+          .pipe(cache('babel'))
           .pipe(babel({
             presets: ["es2015-node6", "es2017"]
           }))
-          .pipe(cache.cache())
+          // .pipe(cache.cache())
           .pipe(gulp.dest('./dist'));
 });
 
@@ -51,5 +49,5 @@ gulp.task('demon', function() {
 });
 
 gulp.task('dev', function(cb) {
-  runSequence('clean-dist', 'make-dist', 'build-dev', 'demon', cb);
+  runSequence('clean-dist', 'make-dist', 'build', 'demon', cb);
 });
