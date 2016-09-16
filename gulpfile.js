@@ -22,16 +22,6 @@ gulp.task('build', function() {
           .pipe(babel({
             presets: ["es2015-node6", "es2017"]
           }))
-          // .pipe(cache.cache())
-          .pipe(gulp.dest('./dist'));
-});
-
-gulp.task('build-dev', function() {
-  return gulp.src('./src/**/*.js')
-          .pipe(plumber())
-          .pipe(babel({
-            presets: ["es2015-node6", "es2017"]
-          }))
           .pipe(gulp.dest('./dist'));
 });
 
