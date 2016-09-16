@@ -43,6 +43,7 @@ gulp.task('demon', function() {
     watch: 'src/',
 		ext: 'js',
 		env: {'NODE_ENV': 'development'},
+    legacyWatch: true,
 		tasks: ['build']
 	});
 
